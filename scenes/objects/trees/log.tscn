@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://crhn36p70783k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5da5i"]
+
+[node name="Log" type="Sprite2D"]
+texture = SubResource("AtlasTexture_5da5i")
