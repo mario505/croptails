@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://dx2renj8flsh0"]
+[gd_scene load_steps=4 format=4 uid="uid://dx2renj8flsh0"]
 
 [ext_resource type="TileSet" uid="uid://m02jotljtyws" path="res://tileSets/game_tile_set.tres" id="1_4ejdf"]
 [ext_resource type="PackedScene" uid="uid://2c5u2hoqowis" path="res://scenes/characters/player/player.tscn" id="2_nja5i"]
+[ext_resource type="PackedScene" uid="uid://c75lvfd2opqxt" path="res://scenes/characters/chicken/chicken.tscn" id="3_negia"]
 
 [node name="TestSceneNPCChicken" type="Node2D"]
 y_sort_enabled = true
@@ -32,3 +33,6 @@ tile_set = ExtResource("1_4ejdf")
 position = Vector2(266, 197)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Chicken" parent="." instance=ExtResource("3_negia")]
+position = Vector2(230, 143)

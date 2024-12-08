@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://c75lvfd2opqxt"]
+[gd_scene load_steps=13 format=3 uid="uid://c75lvfd2opqxt"]
 
 [ext_resource type="Texture2D" uid="uid://dxq4w64yxo52t" path="res://assets/characters/free_chicken_sprites.png" id="1_iqk7m"]
 [ext_resource type="Script" path="res://scripts/state_machine/node_state_machine.gd" id="2_2e8ks"]
 [ext_resource type="Script" path="res://scenes/characters/chicken/idle_state.gd" id="3_bq5bb"]
+[ext_resource type="Script" path="res://scenes/characters/chicken/walk_state.gd" id="4_v30xc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xyglm"]
 atlas = ExtResource("1_iqk7m")
@@ -78,7 +79,10 @@ shape = SubResource("CircleShape2D_diyrv")
 script = ExtResource("2_2e8ks")
 initial_node_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("character", "animated_sprite_2e")]
+[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("character", "animated_sprite_2d")]
 script = ExtResource("3_bq5bb")
 character = NodePath("../..")
-animated_sprite_2e = NodePath("../../AnimatedSprite2D")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("4_v30xc")
