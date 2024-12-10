@@ -75,6 +75,8 @@ autoplay = "idle"
 position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_diyrv")
 
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("2_2e8ks")
 initial_node_state = NodePath("Idle")
@@ -84,5 +86,7 @@ script = ExtResource("3_bq5bb")
 character = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 
-[node name="Walk" type="Node" parent="StateMachine"]
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("character", "animated_sprite_2d")]
 script = ExtResource("4_v30xc")
+character = NodePath("../..")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
