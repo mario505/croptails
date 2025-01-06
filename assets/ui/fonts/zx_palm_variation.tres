@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://uoxfbiu8pqns"]
+
+[ext_resource type="FontFile" uid="uid://bjeaclq0puv6q" path="res://assets/ui/fonts/zx_paln.ttf" id="1_nkqen"]
+
+[resource]
+base_font = ExtResource("1_nkqen")
+spacing_glyph = -3
+spacing_top = 2
