@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cd0bncfkeoacq"]
+
+[node name="SaveLevelDataComponent" type="Node"]
